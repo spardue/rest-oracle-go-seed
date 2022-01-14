@@ -7,6 +7,6 @@ The cost of an Oracle license is less than the cost of man hours that it would t
 That being said, this seed moduralizes the data access module to make moving to Postgres or SQL server simple. 
 
 ## Why Go?
-Go lang uses signficantly less resources than Java, and is optimized to be a web development language.
+Golang uses signficantly less resources than Java, and is optimized to be a web development language.
 
 The cloud savings could be significant.
