@@ -31,3 +31,19 @@ container_id=`docker ps | grep go-seed | cut -d " " -f 1`
 ip=`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $container_id`
 curl -X GET $ip:8080/person
 ```
+
+## Development and debugging using VSCode
+
+Open this directory in VScode and install the following Google plugin: https://code.visualstudio.com/docs/languages/go
+
+The developrer machine must have Oracle Instant Client installed for this to work. Look at the Dockerfile for hints on what to install.
+
+The directory `./vscode/` contains a launch file that runs this project in debug mode. This is useful for debugging and development. 
+
+launch.json must be modified to point at the correct Oracle DB instance.
+
+To start debug mode, Press `F5` with main.go open.
+
+
+
+
