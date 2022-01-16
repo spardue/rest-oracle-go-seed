@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"rest-oracle-go-seed/person"
+	"rest-oracle-go-seed/vehicle"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/godror/godror"
@@ -29,5 +30,6 @@ func main() {
 	// Inject GIN and the database connection into the controller(s).
 	r := gin.Default()
 	person.Controller(r, db)
+	vehicle.Controller(r, db)
 	r.Run()
 }
