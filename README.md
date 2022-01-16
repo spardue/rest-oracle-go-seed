@@ -40,7 +40,7 @@ The developer machine must have Oracle Instant Client installed for this to work
 
 The directory `./vscode/` contains a launch file that runs this project in debug mode. This is useful for debugging and development. 
 
-launch.json must be modified to point at the correct Oracle DB instance.
+(launch.json)[https://github.com/spardue/rest-oracle-go-seed/blob/main/.vscode/launch.json] must be modified to point at the correct Oracle DB instance.
 
 To start debug mode, Press `F5` with main.go open.
 
