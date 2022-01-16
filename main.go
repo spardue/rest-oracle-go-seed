@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"os"
 
 	"rest-oracle-go-seed/person"
 
@@ -11,7 +12,9 @@ import (
 
 func main() {
 
-	db, err := sql.Open("godror", "goseed/password1234@192.168.1.93:1521/orclcdb")
+	// Setup database connection
+	dataSourceName := os.Getenv("DATA_SOURCE_NAME")
+	db, err := sql.Open("godror", dataSourceName)
 	if err != nil {
 		panic("Cannot connect to the DB: " + err.Error())
 	}
@@ -23,8 +26,8 @@ func main() {
 		panic("Cannot ping the DB: " + err.Error())
 	}
 
+	// Inject GIN and the database connection into the controller(s).
 	r := gin.Default()
-
 	person.Controller(r, db)
 	r.Run()
 }
