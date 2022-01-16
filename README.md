@@ -1,7 +1,7 @@
 # rest-oracle-go-seed
 A seed repository that contains a Go project that accepts input via a REST API and saves data to an Oracle database.
 
-This repo is suitable for backend web development. APIs developed with this repository should live behind a proxy like APIGEE
+This repo is suitable for backend web development. APIs developed with this repository should live behind a proxy like APIGEE with API keys
 or be secured with Oauth.
 ## Why Oracle?
 The cost of an Oracle license is less than the cost of man hours that it would take to convert to another DBMS for most organizations. 
